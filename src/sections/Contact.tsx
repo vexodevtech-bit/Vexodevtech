@@ -83,8 +83,8 @@ const Contact: React.FC = () => {
                     <Terminal size={24} />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Discord Profile</div>
-                    <div className="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">954471192096555048</div>
+                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Profil Discord</div>
+                    <div className="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">3vexo3</div>
                   </div>
                   <ArrowUpRight className="ml-auto text-slate-500 group-hover:text-brand-blue group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" size={20} />
                 </a>
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                     <span className="text-xs font-mono font-bold">@</span>
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Email Address</div>
+                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Adres Email</div>
                     <div className="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">vexodevtech@gmail.com</div>
                   </div>
                   <ArrowUpRight className="ml-auto text-slate-500 group-hover:text-brand-blue group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" size={20} />
@@ -169,13 +169,15 @@ const Contact: React.FC = () => {
                   whileHover={{ scale: (isSent || isSending) ? 1 : 1.02, boxShadow: (isSent || isSending) ? "none" : "0 0 20px rgba(0, 243, 255, 0.4)" }}
                   whileTap={{ scale: (isSent || isSending) ? 1 : 0.98 }}
                   className={`w-full py-5 rounded-xl font-bold text-lg flex items-center justify-center gap-3 transition-all ${
-                    isSent ? 'bg-green-500 text-white' : isSending ? 'bg-brand-blue/70 text-brand-dark cursor-wait' : 'bg-brand-blue text-brand-dark'
+                    isSent 
+                      ? 'bg-green-500 text-white' 
+                      : 'bg-brand-blue text-brand-dark'
                   }`}
                 >
-                  {isSent ? (
-                    <>DZIĘKUJĘ! <Send size={20} className="rotate-45" /></>
-                  ) : isSending ? (
-                    <>WYSYŁANIE... <Send size={20} className="animate-pulse" /></>
+                  {isSending ? (
+                    'Wysyłanie...'
+                  ) : isSent ? (
+                    <>Wysłano pomyślnie <Send size={20} /></>
                   ) : (
                     <>Wyślij wiadomość <Send size={20} /></>
                   )}

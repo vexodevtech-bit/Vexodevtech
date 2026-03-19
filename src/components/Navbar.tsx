@@ -25,10 +25,10 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
+    { name: 'O mnie', href: '#about' },
+    { name: 'Usługi', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Kontakt', href: '#contact' },
   ];
 
   if (location.pathname === '/admin') return null;

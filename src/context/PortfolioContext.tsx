@@ -30,18 +30,18 @@ const defaultData: PortfolioData = {
   hero: {
     title: "VEXO",
     subtitle: "Junior Frontend Developer",
-    description: "I'm a Junior Frontend Developer crafting immersive web experiences and optimizing performance-tuned cars for the FiveM universe."
+    description: "Jestem Junior Frontend Developerem, który tworzy immersyjne doświadczenia webowe oraz optymalizuje fizykę pojazdów w świecie FiveM."
   },
   about: {
-    text1: "I am a driven Junior Frontend Developer with a passion for building highly interactive and visually stunning web interfaces.",
-    text2: "Beyond the browser, I specialize in FiveM Car Development, where I fine-tune vehicle physics and optimize performance to ensure the best driving experience on any server.",
-    text3: "I am currently expanding my creative horizon by learning Custom Car Livery Design, blending my technical skills with visual artistry."
+    text1: "Jestem zmotywowanym Junior Frontend Developerem z pasją do budowania wysoce interaktywnych i wizualnie oszałamiających interfejsów internetowych.",
+    text2: "Poza przeglądarką specjalizuję się w FiveM Car Development, gdzie dopracowuję fizykę pojazdów i optymalizuję ich wydajność, aby zapewnić najlepsze wrażenia z jazdy na każdym serwerze.",
+    text3: "Obecnie poszerzam swoje horyzonty kreatywne, ucząc się projektowania niestandardowych malowań pojazdów (liveries), łącząc umiejętności techniczne z artyzmem wizualnym."
   },
   projects: [
     {
       id: 1,
       title: "VEXO_BOT_ULTIMATE",
-      description: "Advanced Discord bot system featuring fully customizable Ticket Systems, Dynamic Welcome Images, and automated server management modules.",
+      description: "Zaawansowany system bota Discord zawierający w pełni konfigurowalne systemy ticketów, dynamiczne obrazy powitalne oraz zautomatyzowane moduły zarządzania serwerem.",
       category: "Bots",
       tech: ["Node.js", "Discord.js", "Canvas", "MongoDB"],
       image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&q=80&w=1000",
@@ -56,7 +56,7 @@ const defaultData: PortfolioData = {
     {
       id: 2,
       title: "VEXO_VEHICLE_STORE",
-      description: "A unique vehicle store system for FiveM. Browse high-performance cars, preview handling stats, and purchase custom-tuned vehicles for your server.",
+      description: "Unikalny system sklepu z pojazdami dla FiveM. Przeglądaj samochody o wysokich osiągach, sprawdzaj statystyki prowadzenia i kupuj niestandardowo dostrojone pojazdy na swój serwer.",
       category: "Car Dev",
       tech: ["React", "NUI", "Lua", "MySQL"],
       image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1000",
@@ -71,7 +71,7 @@ const defaultData: PortfolioData = {
     {
       id: 3,
       title: "CRATE_CASE_SYSTEM",
-      description: "Interactive crate opening system with custom animations. Features include item rarity, crate modification, and a sleek UI for FiveM servers.",
+      description: "Interaktywny system otwierania skrzynek z niestandardowymi animacjami. Funkcje obejmują rzadkość przedmiotów, modyfikację skrzynek oraz elegancki interfejs dla serwerów FiveM.",
       category: "Car Dev",
       tech: ["React", "Framer Motion", "CSS3", "Lua"],
       image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000",

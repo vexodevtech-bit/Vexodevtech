@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             className="text-xl md:text-3xl font-light text-slate-400 mb-12 tracking-tight flex items-center gap-3"
           >
             <Sparkles className="text-brand-blue w-5 h-5 animate-pulse" />
-            Frontend UI Explorer & <span className="text-white font-medium italic underline decoration-brand-blue/30">Car Enthusiast</span>
+            Frontend UI Explorer & <span className="text-white font-medium italic underline decoration-brand-blue/30">Entuzjasta Motoryzacji</span>
           </motion.h2>
 
           {/* Description */}
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
             >
               <div className="absolute inset-0 bg-brand-blue translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors uppercase tracking-widest text-sm">
-                Explore Projects <ChevronRight size={18} />
+                Moje Projekty <ChevronRight size={18} />
               </span>
             </button>
             
@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="group px-10 py-5 border border-white/10 text-white font-bold rounded-full hover:bg-white/5 transition-all hover:border-white/30 uppercase tracking-widest text-sm"
             >
-              Get In Touch
+              Skontaktuj się
             </button>
           </motion.div>
         </div>

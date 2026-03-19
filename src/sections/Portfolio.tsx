@@ -39,7 +39,7 @@ const Portfolio: React.FC = () => {
               PROJECT_REPOSITORY
             </motion.div>
             <h2 className="text-5xl font-black text-white uppercase tracking-tighter">
-              Featured <span className="text-brand-blue">Modules</span>
+              Wybrane <span className="text-brand-blue">Projekty</span>
             </h2>
           </div>
           
@@ -54,7 +54,7 @@ const Portfolio: React.FC = () => {
                     : 'text-slate-500 hover:text-white hover:bg-white/5'
                 }`}
               >
-                {cat}
+                {cat === 'All' ? 'Wszystkie' : cat}
               </button>
             ))}
           </div>
@@ -121,7 +121,7 @@ const Portfolio: React.FC = () => {
                 
                 <div className="flex items-center gap-4 pt-6 border-t border-white/5">
                   <span className="text-[10px] font-mono text-brand-blue uppercase tracking-widest flex items-center gap-2">
-                    Open Project <PlayCircle size={14} />
+                    Zobacz Projekt <PlayCircle size={14} />
                   </span>
                 </div>
               </div>
@@ -222,12 +222,12 @@ const Portfolio: React.FC = () => {
                   
                   <div className="space-y-10">
                     <div>
-                      <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em] mb-4">Project Overview</h4>
+                      <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em] mb-4">O projekcie</h4>
                       <p className="text-slate-400 leading-relaxed text-lg italic">"{selectedProject.description}"</p>
                     </div>
                     
                     <div>
-                      <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em] mb-4">Tech Stack</h4>
+                      <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em] mb-4">Technologie</h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedProject.tech.map((t: string, i: number) => (
                           <span key={i} className="px-4 py-2 text-xs font-mono bg-white/5 border border-white/5 text-brand-blue rounded-xl uppercase tracking-widest">

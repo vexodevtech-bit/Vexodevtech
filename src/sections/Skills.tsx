@@ -13,17 +13,17 @@ const Skills: React.FC = () => {
       skills: ["React.js", "Vite", "Tailwind CSS", "Framer Motion", "JavaScript (ES6+)", "NUI (FiveM UI)"]
     },
     {
-      title: "Car Development",
+      title: "Rozwój Pojazdów",
       icon: <Gauge className="text-brand-purple" />,
-      skills: ["Handling Tuning", "Physics Optimization", "Performance Balancing", "LOD Optimization", "Vehicle Metadata"]
+      skills: ["Handling Tuning", "Optymalizacja Fizyki", "Balans Osiągów", "Optymalizacja LOD", "Vehicle Metadata"]
     },
     {
-      title: "Visual & Design",
+      title: "Wizualizacja i Design",
       icon: <Palette className="text-brand-pink" />,
-      skills: ["UI/UX Design", "Custom Liveries", "Blender (Basic)", "Photoshop", "Typography", "Color Theory"]
+      skills: ["UI/UX Design", "Custom Liveries", "Blender (Podstawy)", "Photoshop", "Typografia", "Teoria Koloru"]
     },
     {
-      title: "Core Tools",
+      title: "Narzędzia",
       icon: <Settings className="text-white" />,
       skills: ["Git", "VS Code", "OpenIV", "ZModeler3", "Postman", "Chrome DevTools"]
     }
@@ -63,10 +63,10 @@ const Skills: React.FC = () => {
             className="flex-1 w-full grid grid-cols-2 gap-6"
           >
             {[
-              { label: "Frontend Projects", value: "15+", icon: <Monitor className="w-5 h-5" /> },
-              { label: "Vehicles Tuned", value: "120+", icon: <Gauge className="w-5 h-5" /> },
-              { label: "Design Hours", value: "450+", icon: <Palette className="w-5 h-5" /> },
-              { label: "System Uptime", value: "99%", icon: <Terminal className="w-5 h-5" /> }
+              { label: "Projekty Frontend", value: "15+", icon: <Monitor className="w-5 h-5" /> },
+              { label: "Dostrojone Pojazdy", value: "120+", icon: <Gauge className="w-5 h-5" /> },
+              { label: "Godziny Designu", value: "450+", icon: <Palette className="w-5 h-5" /> },
+              { label: "Uptime Systemu", value: "99%", icon: <Terminal className="w-5 h-5" /> }
             ].map((stat, i) => (
               <div key={i} className="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-xl group hover:border-brand-blue/30 transition-all duration-500">
                 <div className="text-brand-blue mb-4 opacity-50 group-hover:opacity-100 transition-opacity">{stat.icon}</div>

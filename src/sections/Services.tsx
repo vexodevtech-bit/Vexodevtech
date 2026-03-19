@@ -6,28 +6,28 @@ const Services: React.FC = () => {
   const services = [
     {
       title: "Frontend UI/UX",
-      description: "Developing highly interactive and responsive web interfaces using React and Tailwind CSS. Focused on smooth animations and pixel-perfect design.",
+      description: "Tworzenie wysoce interaktywnych i responsywnych interfejsów webowych przy użyciu React i Tailwind CSS. Skupienie na płynnych animacjach i pixel-perfect design.",
       icon: <Layout className="text-brand-blue" size={32} />,
       gradient: "from-brand-blue/20 to-transparent",
       tag: "CORE_DEV"
     },
     {
-      title: "FiveM Vehicle Physics",
-      description: "Complete vehicle performance tuning (handling.meta). Optimizing physics for realism, drifting, or competitive racing on FiveM servers.",
+      title: "Fizyka Pojazdów FiveM",
+      description: "Kompleksowe strojenie osiągów pojazdów (handling.meta). Optymalizacja fizyki pod kątem realizmu, driftu lub wyścigów na serwerach FiveM.",
       icon: <Zap className="text-brand-purple" size={32} />,
       gradient: "from-brand-purple/20 to-transparent",
       tag: "CAR_DEV"
     },
     {
-      title: "Interactive NUI Design",
-      description: "Creating custom user interfaces for FiveM scripts (NUI). Bridging the gap between web technologies and game engine interaction.",
+      title: "Interaktywne Projekty NUI",
+      description: "Tworzenie niestandardowych interfejsów użytkownika dla skryptów FiveM (NUI). Łączenie technologii webowych z interakcją w silniku gry.",
       icon: <MousePointer2 className="text-brand-pink" size={32} />,
       gradient: "from-brand-pink/20 to-transparent",
       tag: "UI_UX"
     },
     {
-      title: "Custom Car Liveries",
-      description: "Designing unique vehicle wraps and liveries. High-quality textures and 4K templates for a standout visual presence in-game.",
+      title: "Malowania Pojazdów (Liveries)",
+      description: "Projektowanie unikalnych oklein i malowań pojazdów. Wysokiej jakości tekstury i szablony 4K dla wyróżniającej się obecności wizualnej w grze.",
       icon: <Palette className="text-brand-cyan" size={32} />,
       gradient: "from-brand-cyan/20 to-transparent",
       tag: "VISUALS"
@@ -48,7 +48,7 @@ const Services: React.FC = () => {
               CAPABILITIES_LOG
             </motion.div>
             <h2 className="text-5xl font-black text-white uppercase tracking-tighter mb-8">
-              Specialized <span className="text-brand-blue">Solutions</span>
+              Specjalistyczne <span className="text-brand-blue">Rozwiązania</span>
             </h2>
 
             {/* Quick Status Panel */}
@@ -58,20 +58,20 @@ const Services: React.FC = () => {
               className="flex flex-wrap gap-8 p-6 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-md"
             >
               <div className="flex flex-col gap-1">
-                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Availability</span>
+                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Dostępność</span>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-xs font-bold text-white uppercase tracking-wider">Available for projects</span>
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">Dostępny na projekty</span>
                 </div>
               </div>
               <div className="w-[1px] h-8 bg-white/10 hidden sm:block" />
               <div className="flex flex-col gap-1">
-                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Response Time</span>
-                <span className="text-xs font-bold text-white uppercase tracking-wider">~24 Hours</span>
+                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Czas Odpowiedzi</span>
+                <span className="text-xs font-bold text-white uppercase tracking-wider">~24 Godziny</span>
               </div>
               <div className="w-[1px] h-8 bg-white/10 hidden sm:block" />
               <div className="flex flex-col gap-1">
-                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Core Focus</span>
+                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Specjalizacja</span>
                 <span className="text-xs font-bold text-white uppercase tracking-wider">FiveM / UI / Web</span>
               </div>
             </motion.div>
@@ -83,7 +83,7 @@ const Services: React.FC = () => {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="flex items-center gap-3 px-10 py-5 rounded-full bg-white text-brand-dark font-black text-xs uppercase tracking-[0.2em] hover:bg-brand-blue hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all"
           >
-            Get In Touch <ArrowUpRight size={18} />
+            Skontaktuj się <ArrowUpRight size={18} />
           </motion.button>
         </div>
 
@@ -118,7 +118,7 @@ const Services: React.FC = () => {
                 </p>
                 
                 <div className="flex items-center gap-2 text-brand-blue/40 font-mono text-[10px] uppercase tracking-[0.3em]">
-                   Premium Service Module
+                   Moduł Usług Premium
                 </div>
               </div>
 
