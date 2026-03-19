@@ -99,8 +99,8 @@ const Portfolio: React.FC = () => {
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <div className="text-[10px] font-mono text-brand-blue uppercase tracking-[0.3em] mb-1">
-                      {project.category} // MODULE_{project.id}
+                    <div className="text-[10px] font-mono text-brand-blue uppercase tracking-[0.4em] mb-1">
+                      {project.category}
                     </div>
                     <h3 className="text-2xl font-black text-white uppercase tracking-tight group-hover:text-brand-blue transition-colors">
                       {project.title}
@@ -213,8 +213,8 @@ const Portfolio: React.FC = () => {
                 </div>
                 
                 <div className="w-full lg:w-[450px] p-10 md:p-14 overflow-y-auto bg-brand-dark/50 backdrop-blur-md">
-                  <div className="text-brand-blue font-mono text-xs uppercase tracking-[0.4em] mb-6">
-                    {selectedProject.category} // SYSTEM_CORE
+                  <div className="text-brand-blue font-mono text-[10px] uppercase tracking-[0.4em] mb-6">
+                    {selectedProject.category}
                   </div>
                   <h3 className="text-5xl font-black text-white mb-8 leading-[0.9] uppercase tracking-tighter">
                     {selectedProject.title}
@@ -222,7 +222,7 @@ const Portfolio: React.FC = () => {
                   
                   <div className="space-y-10">
                     <div>
-                      <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em] mb-4">Module Specification</h4>
+                      <h4 className="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em] mb-4">Project Overview</h4>
                       <p className="text-slate-400 leading-relaxed text-lg italic">"{selectedProject.description}"</p>
                     </div>
                     

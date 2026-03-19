@@ -47,21 +47,10 @@ const MainLayout: React.FC = () => {
           <Portfolio />
         </section>
 
-        <section id="lab" className="relative">
-          <InteractiveSection />
-        </section>
-
         <section id="contact" className="relative">
           <Contact />
         </section>
       </main>
-
-      {/* Global Brand Overlay */}
-      <div className="fixed top-1/2 left-10 -translate-y-1/2 hidden xl:flex flex-col gap-8 text-[10px] font-mono text-slate-800 tracking-[1em] uppercase z-40 pointer-events-none">
-        <span className="rotate-90">SYSTEM_01</span>
-        <span className="rotate-90">VEXO_OS_V2.0</span>
-        <span className="rotate-90">CORE_MODULES</span>
-      </div>
     </div>
   );
 };

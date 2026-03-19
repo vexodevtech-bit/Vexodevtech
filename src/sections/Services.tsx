@@ -3,13 +3,6 @@ import { motion } from 'framer-motion';
 import { Layout, Bot, Settings, Zap, ArrowUpRight, Palette, MousePointer2 } from 'lucide-react';
 
 const Services: React.FC = () => {
-  const [activeSystemInfo, setActiveSystemInfo] = React.useState<string | null>(null);
-
-  const showSystemInfo = (title: string) => {
-    setActiveSystemInfo(title);
-    setTimeout(() => setActiveSystemInfo(null), 3000);
-  };
-
   const services = [
     {
       title: "Frontend UI/UX",
@@ -54,17 +47,43 @@ const Services: React.FC = () => {
               <span className="w-12 h-[1px] bg-brand-blue" />
               CAPABILITIES_LOG
             </motion.div>
-            <h2 className="text-5xl font-black text-white uppercase tracking-tighter">
+            <h2 className="text-5xl font-black text-white uppercase tracking-tighter mb-8">
               Specialized <span className="text-brand-blue">Solutions</span>
             </h2>
+
+            {/* Quick Status Panel */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="flex flex-wrap gap-8 p-6 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-md"
+            >
+              <div className="flex flex-col gap-1">
+                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Availability</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                  <span className="text-xs font-bold text-white uppercase tracking-wider">Available for projects</span>
+                </div>
+              </div>
+              <div className="w-[1px] h-8 bg-white/10 hidden sm:block" />
+              <div className="flex flex-col gap-1">
+                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Response Time</span>
+                <span className="text-xs font-bold text-white uppercase tracking-wider">~24 Hours</span>
+              </div>
+              <div className="w-[1px] h-8 bg-white/10 hidden sm:block" />
+              <div className="flex flex-col gap-1">
+                <span className="text-[8px] font-mono text-slate-500 uppercase tracking-widest">Core Focus</span>
+                <span className="text-xs font-bold text-white uppercase tracking-wider">FiveM / UI / Web</span>
+              </div>
+            </motion.div>
           </div>
+          
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex items-center gap-3 px-8 py-4 rounded-full bg-white text-brand-dark font-black text-[10px] uppercase tracking-[0.2em] hover:bg-brand-blue hover:shadow-[0_0_20px_rgba(0,243,255,0.4)] transition-all"
+            className="flex items-center gap-3 px-10 py-5 rounded-full bg-white text-brand-dark font-black text-xs uppercase tracking-[0.2em] hover:bg-brand-blue hover:shadow-[0_0_30px_rgba(0,243,255,0.4)] transition-all"
           >
-            Napisz do mnie <ArrowUpRight size={16} />
+            Get In Touch <ArrowUpRight size={18} />
           </motion.button>
         </div>
 
@@ -80,18 +99,6 @@ const Services: React.FC = () => {
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
               
-              {/* System Info Overlay */}
-              <div className={`absolute top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${activeSystemInfo === service.title ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
-                <div className="px-6 py-3 rounded-2xl bg-brand-dark/90 border border-brand-blue/30 backdrop-blur-md shadow-[0_0_20px_rgba(0,243,255,0.2)]">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-brand-blue animate-pulse" />
-                    <span className="text-[10px] font-mono text-brand-blue uppercase tracking-widest whitespace-nowrap">
-                      DIAGNOSTIC: {Math.floor(Math.random() * 20 + 80)}% OPTIMIZED
-                    </span>
-                  </div>
-                </div>
-              </div>
-
               <div className="relative z-10">
                 <div className="flex justify-between items-start mb-10">
                   <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-brand-blue/50 transition-colors">
@@ -106,17 +113,13 @@ const Services: React.FC = () => {
                   {service.title}
                 </h3>
                 
-                <p className="text-slate-400 text-lg mb-10 leading-relaxed max-w-sm">
+                <p className="text-slate-400 text-lg leading-relaxed max-w-sm">
                   {service.description}
                 </p>
                 
-                <motion.button
-                  whileHover={{ x: 10 }}
-                  onClick={() => showSystemInfo(service.title)}
-                  className="flex items-center gap-2 text-brand-blue font-mono text-[10px] uppercase tracking-[0.3em]"
-                >
-                  SYSTEM_INFO <ArrowUpRight size={14} />
-                </motion.button>
+                <div className="flex items-center gap-2 text-brand-blue/40 font-mono text-[10px] uppercase tracking-[0.3em]">
+                   Premium Service Module
+                </div>
               </div>
 
               {/* Decorative corner accent */}

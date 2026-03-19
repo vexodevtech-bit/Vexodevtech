@@ -42,11 +42,11 @@ const Skills: React.FC = () => {
           >
             <div className="flex items-center gap-2 mb-6 text-brand-blue font-mono text-sm uppercase tracking-[0.4em]">
               <span className="w-12 h-[1px] bg-brand-blue" />
-              SYSTEM_PROFILE
+              Professional Profile
             </div>
             <h2 className="text-5xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter">
               Junior <span className="text-brand-blue">Frontend</span> <br />
-              Architect<span className="text-brand-purple">.</span>
+              Developer<span className="text-brand-purple">.</span>
             </h2>
             <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
               <p>{data.about.text1}</p>
@@ -78,8 +78,8 @@ const Skills: React.FC = () => {
         </div>
 
         <div className="text-center mb-16">
-          <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">Technical <span className="text-brand-blue">Matrix</span></h3>
-          <p className="text-slate-500 font-mono text-xs uppercase tracking-[0.2em]">Core modules and technologies I utilize</p>
+          <h3 className="text-3xl font-black text-white mb-4 uppercase tracking-tight">Technical <span className="text-brand-blue">Expertise</span></h3>
+          <p className="text-slate-500 font-mono text-xs uppercase tracking-[0.2em]">Core technologies and tools I specialize in</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

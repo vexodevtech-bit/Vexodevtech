@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare, Send, Github, Terminal, ArrowUpRight } from 'lucide-react';
 
+const PROFILE_URL = "https://discord.com/users/954471192096555048";
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -72,36 +74,33 @@ const Contact: React.FC = () => {
 
               <div className="space-y-6">
                 <a 
-                  href="https://discord.com/users/954471192096555048" 
+                  href={PROFILE_URL} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-brand-blue/50 transition-all glass-card relative overflow-hidden"
+                  className="flex items-center gap-6 p-6 rounded-2xl bg-white/[0.02] border border-white/5 group hover:border-brand-blue/30 transition-all backdrop-blur-sm relative overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 px-3 py-1 bg-brand-blue/10 border-b border-l border-brand-blue/20 text-[8px] font-mono text-brand-blue opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
-                    Open Profile
-                  </div>
-                  <div className="w-14 h-14 rounded-xl bg-[#5865F2]/10 flex items-center justify-center text-[#5865F2] group-hover:bg-[#5865F2] group-hover:text-white transition-all">
-                    <MessageSquare size={28} />
+                  <div className="w-12 h-12 rounded-xl bg-brand-blue/5 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue/20 transition-all">
+                    <Terminal size={24} />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Discord</div>
-                    <div className="text-xl font-bold text-white group-hover:text-brand-blue transition-colors">3vexo3</div>
+                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Discord Profile</div>
+                    <div className="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">954471192096555048</div>
                   </div>
-                  <ArrowUpRight className="ml-auto text-slate-500 group-hover:text-brand-blue transition-colors" size={20} />
+                  <ArrowUpRight className="ml-auto text-slate-500 group-hover:text-brand-blue group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" size={20} />
                 </a>
 
                 <a 
                   href="mailto:vexodevtech@gmail.com" 
-                  className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-brand-blue/50 transition-all glass-card"
+                  className="flex items-center gap-6 p-6 rounded-2xl bg-white/[0.02] border border-white/5 group hover:border-brand-blue/30 transition-all backdrop-blur-sm"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-brand-dark transition-all">
-                    <Mail size={28} />
+                  <div className="w-12 h-12 rounded-xl bg-brand-blue/5 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue/20 transition-all">
+                    <span className="text-xs font-mono font-bold">@</span>
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-1">Email</div>
-                    <div className="text-xl font-bold text-white group-hover:text-brand-blue transition-colors">vexodevtech@gmail.com</div>
+                    <div className="text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] mb-1">Email Address</div>
+                    <div className="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">vexodevtech@gmail.com</div>
                   </div>
-                  <ArrowUpRight className="ml-auto text-slate-500 group-hover:text-brand-blue transition-colors" size={20} />
+                  <ArrowUpRight className="ml-auto text-slate-500 group-hover:text-brand-blue group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" size={20} />
                 </a>
               </div>
             </motion.div>

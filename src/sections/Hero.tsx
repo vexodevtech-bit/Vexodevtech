@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { ChevronRight, Github, Mail, Terminal, Sparkles } from 'lucide-react';
 import { usePortfolio } from '../context/PortfolioContext';
 
+const PROFILE_URL = "https://discord.com/users/954471192096555048";
+
 const Hero: React.FC = () => {
   const { data } = usePortfolio();
   
@@ -77,22 +79,22 @@ const Hero: React.FC = () => {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6">
-            <a
-              href="#portfolio"
-              className="group relative px-10 py-5 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(0,243,255,0.3)]"
+            <button
+              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group relative px-10 py-5 bg-white text-black font-bold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(0,243,255,0.3)]"
             >
               <div className="absolute inset-0 bg-brand-blue translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-              <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors">
-                EXPLORE PROJECTS <ChevronRight size={20} />
+              <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors uppercase tracking-widest text-sm">
+                Explore Projects <ChevronRight size={18} />
               </span>
-            </a>
+            </button>
             
-            <a
-              href="#contact"
-              className="group px-10 py-5 border border-white/10 text-white font-bold rounded-full hover:bg-white/5 transition-all hover:border-white/30"
+            <button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group px-10 py-5 border border-white/10 text-white font-bold rounded-full hover:bg-white/5 transition-all hover:border-white/30 uppercase tracking-widest text-sm"
             >
-              INITIATE_CONTACT
-            </a>
+              Get In Touch
+            </button>
           </motion.div>
         </div>
       </motion.div>
@@ -100,15 +102,16 @@ const Hero: React.FC = () => {
       {/* Decorative Elements */}
       <div className="absolute bottom-10 left-10 hidden lg:flex flex-col gap-6 text-slate-600">
         <a 
-          href="https://discord.com/users/954471192096555048"
+          href={PROFILE_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-brand-blue transition-all hover:scale-110 active:scale-95 group relative"
+          aria-label="Discord Profile"
         >
           <Terminal size={20} />
           <div className="absolute -inset-2 bg-brand-blue/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
         </a>
-        <div className="w-[1px] h-20 bg-slate-800 mx-auto mt-2" />
+        <div className="w-[1px] h-20 bg-slate-800/50 mx-auto mt-2" />
       </div>
 
       <div className="absolute top-1/2 -right-20 -translate-y-1/2 hidden xl:block">
