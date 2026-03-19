@@ -100,18 +100,9 @@ const Hero: React.FC = () => {
       {/* Decorative Elements */}
       <div className="absolute bottom-10 left-10 hidden lg:flex flex-col gap-6 text-slate-600">
         <a 
-          href="mailto:vexodevtech@gmail.com" 
-          className="hover:text-brand-blue transition-all hover:scale-110 active:scale-95 group relative"
-        >
-          <Mail size={20} />
-          <div className="absolute -inset-2 bg-brand-blue/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-        </a>
-        <a 
-          href="#" 
-          onClick={(e) => {
-            e.preventDefault();
-            window.open('https://discord.com/users/3vexo3', '_blank');
-          }}
+          href="https://discord.com/users/954471192096555048"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hover:text-brand-blue transition-all hover:scale-110 active:scale-95 group relative"
         >
           <Terminal size={20} />

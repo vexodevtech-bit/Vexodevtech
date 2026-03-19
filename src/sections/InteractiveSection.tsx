@@ -4,6 +4,29 @@ import { motion } from 'framer-motion';
 const InteractiveSection: React.FC = () => {
   const [isGlowOn, setIsGlowOn] = useState(false);
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  const [systemStatus, setSystemStatus] = useState("SYSTEM_IDLE");
+  const [performance, setPerformance] = useState(1);
+
+  const handleModuleClick = (id: number) => {
+    switch(id) {
+      case 1:
+        setPerformance(prev => prev === 1 ? 1.5 : 1);
+        setSystemStatus("PERFORMANCE_BOOSTED");
+        break;
+      case 2:
+        setIsGlowOn(!isGlowOn);
+        setSystemStatus(isGlowOn ? "NORMAL_MODE" : "VISUAL_OVERDRIVE");
+        break;
+      case 3:
+        setSystemStatus("SCANNING_RESOURCES...");
+        setTimeout(() => setSystemStatus("SYSTEM_OPTIMIZED"), 2000);
+        break;
+      case 4:
+        setSystemStatus("ENGINES_READY");
+        setTimeout(() => setSystemStatus("SYSTEM_IDLE"), 2000);
+        break;
+    }
+  };
 
   return (
     <section className="py-24 relative bg-brand-dark/50 overflow-hidden">
@@ -31,10 +54,15 @@ const InteractiveSection: React.FC = () => {
             <div className={`absolute inset-0 bg-brand-blue/5 transition-opacity duration-500 ${isGlowOn ? 'opacity-100' : 'opacity-0'}`} />
             
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-brand-blue animate-pulse" />
-                SYSTEM CONTROLS
-              </h3>
+              <div className="flex justify-between items-center mb-8">
+                <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                  <span className={`w-2 h-2 rounded-full ${isGlowOn ? 'bg-brand-blue shadow-[0_0_10px_#00f3ff]' : 'bg-brand-blue'} animate-pulse`} />
+                  SYSTEM CONTROLS
+                </h3>
+                <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono text-brand-blue uppercase tracking-widest">
+                  {systemStatus}
+                </div>
+              </div>
 
               <div className="space-y-8">
                 {/* Glow Switch */}
@@ -69,8 +97,8 @@ const InteractiveSection: React.FC = () => {
                       <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                         <motion.div 
                           initial={{ width: 0 }}
-                          whileInView={{ width: `${item.value}%` }}
-                          transition={{ duration: 1, delay: idx * 0.2 }}
+                          animate={{ width: `${item.value}%` }}
+                          transition={{ duration: 1 / performance, delay: idx * 0.2 }}
                           className={`h-full ${isGlowOn ? 'bg-brand-blue shadow-[0_0_10px_#00f3ff]' : 'bg-slate-700'}`}
                         />
                       </div>
@@ -88,7 +116,9 @@ const InteractiveSection: React.FC = () => {
                 key={i}
                 onMouseEnter={() => setActiveCard(i)}
                 onMouseLeave={() => setActiveCard(null)}
+                onClick={() => handleModuleClick(i)}
                 whileHover={{ scale: 1.05, y: -10 }}
+                whileTap={{ scale: 0.95 }}
                 className={`aspect-square rounded-3xl border transition-all duration-500 flex flex-col items-center justify-center gap-4 cursor-pointer relative overflow-hidden ${
                   activeCard === i 
                     ? 'bg-brand-blue/10 border-brand-blue/50 shadow-[0_0_30px_rgba(0,243,255,0.2)]' 
@@ -99,7 +129,7 @@ const InteractiveSection: React.FC = () => {
                   {i === 1 ? '⚡' : i === 2 ? '💎' : i === 3 ? '🛸' : '🚀'}
                 </div>
                 <div className={`text-[10px] font-mono uppercase tracking-[0.2em] ${activeCard === i ? 'text-brand-blue' : 'text-slate-500'}`}>
-                  MODULE_0{i}
+                  {i === 1 ? 'PERF_BOOST' : i === 2 ? 'GLOW_TOGGLE' : i === 3 ? 'SCAN_SYS' : 'LAUNCH_SYS'}
                 </div>
                 {activeCard === i && (
                   <motion.div 

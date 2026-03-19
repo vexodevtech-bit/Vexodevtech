@@ -104,7 +104,7 @@ export default async function handler(req, res) {
         <div style="text-align: center; margin-top: 30px; color: #475569; font-size: 12px;">
           <p>Wiadomość wygenerowana automatycznie przez system VEXO OS.</p>
           <div style="margin-top: 10px;">
-            <a href="https://discord.com/users/1118181636183015485" style="color: #5865F2; text-decoration: none; margin: 0 10px;">Discord</a>
+            <a href="https://discord.com/users/954471192096555048" style="color: #5865F2; text-decoration: none; margin: 0 10px;">Discord</a>
             <span style="color: #1e293b;">|</span>
             <span style="color: #94a3b8; margin: 0 10px;">${escapeHtml(inboxEmail)}</span>
           </div>

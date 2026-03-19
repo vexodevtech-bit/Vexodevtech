@@ -72,11 +72,14 @@ const Contact: React.FC = () => {
 
               <div className="space-y-6">
                 <a 
-                  href="https://discord.com/users/1118181636183015485" 
+                  href="https://discord.com/users/954471192096555048" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-brand-blue/50 transition-all glass-card"
+                  className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-brand-blue/50 transition-all glass-card relative overflow-hidden"
                 >
+                  <div className="absolute top-0 right-0 px-3 py-1 bg-brand-blue/10 border-b border-l border-brand-blue/20 text-[8px] font-mono text-brand-blue opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">
+                    Open Profile
+                  </div>
                   <div className="w-14 h-14 rounded-xl bg-[#5865F2]/10 flex items-center justify-center text-[#5865F2] group-hover:bg-[#5865F2] group-hover:text-white transition-all">
                     <MessageSquare size={28} />
                   </div>

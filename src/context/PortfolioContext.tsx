@@ -7,6 +7,7 @@ interface Project {
   category: string;
   tech: string[];
   image: string;
+  images?: string[];
   demoUrl: string;
   githubUrl: string;
 }
@@ -44,6 +45,11 @@ const defaultData: PortfolioData = {
       category: "Bots",
       tech: ["Node.js", "Discord.js", "Canvas", "MongoDB"],
       image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&q=80&w=1000",
+      images: [
+        "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&q=80&w=1000",
+        "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=1000",
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000"
+      ],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -54,6 +60,11 @@ const defaultData: PortfolioData = {
       category: "Car Dev",
       tech: ["React", "NUI", "Lua", "MySQL"],
       image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1000",
+      images: [
+        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1000",
+        "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1000",
+        "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=1000"
+      ],
       demoUrl: "#",
       githubUrl: "#"
     },
@@ -64,6 +75,10 @@ const defaultData: PortfolioData = {
       category: "Car Dev",
       tech: ["React", "Framer Motion", "CSS3", "Lua"],
       image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000",
+      images: [
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000",
+        "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1000"
+      ],
       demoUrl: "#",
       githubUrl: "#"
     }
