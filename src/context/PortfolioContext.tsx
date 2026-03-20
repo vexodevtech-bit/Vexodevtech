@@ -44,9 +44,9 @@ const defaultData: PortfolioData = {
       description: "Zaawansowany system bota Discord zawierający w pełni konfigurowalne systemy ticketów, dynamiczne obrazy powitalne oraz zautomatyzowane moduły zarządzania serwerem.",
       category: "Bots",
       tech: ["Node.js", "Discord.js", "Canvas", "MongoDB"],
-      image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&q=80&w=1000",
+      image: "https://i.postimg.cc/1z0QVRSG/chatbot-chat-message-vectorart-78370-4104.avif",
       images: [
-        "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&q=80&w=1000",
+        "https://i.postimg.cc/1z0QVRSG/chatbot-chat-message-vectorart-78370-4104.avif",
         "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=1000",
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000"
       ],
@@ -74,9 +74,9 @@ const defaultData: PortfolioData = {
       description: "Interaktywny system otwierania skrzynek z niestandardowymi animacjami. Funkcje obejmują rzadkość przedmiotów, modyfikację skrzynek oraz elegancki interfejs dla serwerów FiveM.",
       category: "Car Dev",
       tech: ["React", "Framer Motion", "CSS3", "Lua"],
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000",
+      image: "https://i.postimg.cc/9QJk64cZ/E92DEFF9-655A-4870-81F3-E0202D793BBC.png",
       images: [
-        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000",
+        "https://i.postimg.cc/9QJk64cZ/E92DEFF9-655A-4870-81F3-E0202D793BBC.png",
         "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1000"
       ],
       demoUrl: "#",
@@ -115,6 +115,37 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   });
 
   useEffect(() => {
+    // Bardziej agresywna migracja: Szukamy projektów po słowach kluczowych w tytule
+    const newBotImage = "https://i.postimg.cc/1z0QVRSG/chatbot-chat-message-vectorart-78370-4104.avif";
+    const newCrateImage = "https://i.postimg.cc/9QJk64cZ/E92DEFF9-655A-4870-81F3-E0202D793BBC.png";
+    
+    let needsUpdate = false;
+    const updatedProjects = data.projects.map(p => {
+      // Szukamy Bota po kategorii lub tytule
+      if ((p.category === "Bots" || p.title.toLowerCase().includes("bot")) && p.image !== newBotImage) {
+        needsUpdate = true;
+        return { 
+          ...p, 
+          image: newBotImage,
+          images: [newBotImage, ...(p.images || []).filter(img => !img.includes("unsplash") && img !== newBotImage)]
+        };
+      }
+      // Szukamy systemu skrzyń po tytule
+      if (p.title.toLowerCase().includes("skrzyn") && p.image !== newCrateImage) {
+        needsUpdate = true;
+        return { 
+          ...p, 
+          image: newCrateImage,
+          images: [newCrateImage, ...(p.images || []).filter(img => !img.includes("unsplash") && img !== newCrateImage)]
+        };
+      }
+      return p;
+    });
+
+    if (needsUpdate) {
+      setData(prev => ({ ...prev, projects: updatedProjects }));
+    }
+    
     localStorage.setItem('vexo_portfolio_data', JSON.stringify(data));
   }, [data]);
 
